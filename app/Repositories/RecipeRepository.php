@@ -16,7 +16,7 @@ class RecipeRepository
         return Recipe::findOrFail($id);
     }
     
-    public function search($params, $perPage = 10)
+    public function search($params = [], $perPage = 10)
     {
         $query = Recipe::query()->with(['ingredients', 'steps']);
 
