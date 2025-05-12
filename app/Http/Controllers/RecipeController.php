@@ -17,7 +17,7 @@ class RecipeController extends Controller
     public function index()
     {
         $recipes = $this->recipes->search();
-
+        
         return RecipeResource::collection($recipes);
     }
 

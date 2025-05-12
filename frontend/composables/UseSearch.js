@@ -1,5 +1,6 @@
 export const useSearch = () => {
     const config = useRuntimeConfig();
+    const route = useRoute();
     const email = ref('');
     const keyword = ref('');
     const ingredient = ref('');
@@ -11,6 +12,7 @@ export const useSearch = () => {
         email: email.value,
         keyword: keyword.value,
         ingredient: ingredient.value,
+        page: route.query.page || 1
     }));
 
     const search = async () => {
@@ -32,7 +34,7 @@ export const useSearch = () => {
         
         console.log('Search response:', data.value);
         results.value = data.value?.data || [];
-        totalPages.value = data.value?.last_page || 0;
+        totalPages.value = data.value?.meta?.last_page || 0;
         loading.value = false;
     }
 
@@ -40,6 +42,7 @@ export const useSearch = () => {
         loading.value = true;
         console.log('API Base URL:', config.public.apiBase);
         const { data, error } = await useFetch('/recipes', {
+            query: { page: route.query.page || 1 },
             baseURL: config.public.apiBase,
             headers: {
                 'Accept': 'application/json',
@@ -54,7 +57,7 @@ export const useSearch = () => {
         
         console.log('Index response:', data.value);
         results.value = data.value?.data || [];
-        totalPages.value = data.value?.last_page || 0;
+        totalPages.value = data.value?.meta?.last_page || 0;
         loading.value = false;
     }
 
