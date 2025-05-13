@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen bg-gray-100 p-8">
         <header class="mb-6">
-            <h1 class="text-3xl font-bold text-blue-600 mb-2">Recipe Search</h1>
+            <h1 class="text-3xl font-bold text-blue-600 mb-2">Recipe Search 3000</h1>
             <p class="text-gray-700">Search for recipes by name, ingredient, or author email</p>
         </header>
         <main class="container mx-auto">
@@ -16,7 +16,7 @@
             <template v-else>
                 <ul class="grid gap-4">
                     <li v-for="recipe in results" :key="recipe.id">
-                        <NuxtLink :to="`/recipe/${recipe.slug}`" class="block p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 transition-colors">
+                        <NuxtLink :to="`/recipes/${recipe.slug}`" class="block p-4 bg-white rounded-lg shadow-md hover:bg-gray-50 transition-colors">
                             <h2 class="text-lg font-semibold mb-2">{{ recipe.name }}</h2>
                         </NuxtLink>
                     </li>

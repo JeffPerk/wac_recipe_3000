@@ -15,5 +15,6 @@ use App\Http\Controllers\RecipeController;
 |
 */
 
-Route::get('/recipes', [RecipeController::class, 'index']);
 Route::get('/recipes/search', [RecipeController::class, 'search']);
+Route::get('/recipes', [RecipeController::class, 'index']);
+Route::get('/recipes/{slug}', [RecipeController::class, 'show']);

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Recipe;
 use App\Repositories\RecipeRepository;
-use Illuminate\Http\Request;
 use App\Http\Resources\RecipeResource;
+use Illuminate\Http\Request;
 class RecipeController extends Controller
 {
     protected $recipes;
@@ -29,5 +30,10 @@ class RecipeController extends Controller
         return RecipeResource::collection($recipes);
     }
     
-    
+    public function show($slug)
+    {
+        $recipe = Recipe::with(['ingredients', 'steps'])->where('slug', $slug)->firstOrFail();
+
+        return new RecipeResource($recipe);
+    }
 }

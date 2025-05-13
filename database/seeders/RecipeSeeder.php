@@ -80,7 +80,7 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'Spicy Chicken Tacos',
                 'description' => 'A spicy chicken taco with a hint of garlic',
-                'author_email' => 'linda@example.com',
+                'author_email' => 'roger@example.com',
                 'ingredients' => [
                     'Chicken',
                     'Garlic',
@@ -99,7 +99,7 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'Grilled Cheese Sandwich',
                 'description' => 'A grilled cheese sandwich with a hint of garlic',
-                'author_email' => 'linda@example.com',
+                'author_email' => 'bill@example.com',
                 'ingredients' => [
                     'Bread',
                     'Cheese',
@@ -114,7 +114,7 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'Classic Caesar Salad',
                 'description' => 'A classic caesar salad with a hint of garlic',
-                'author_email' => 'linda@example.com',
+                'author_email' => 'roger@example.com',
                 'ingredients' => [
                     'Lettuce',
                     'Cheese',
@@ -129,7 +129,7 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'Potato Soup',
                 'description' => 'A creamy potato soup with a hint of garlic',
-                'author_email' => 'linda@example.com',
+                'author_email' => 'amy@example.com',
                 'ingredients' => [
                     'Potatoes',
                     'Onions', 
@@ -148,7 +148,7 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'Beef Stir Fry',
                 'description' => 'A quick and flavorful beef stir fry with vegetables',
-                'author_email' => 'linda@example.com',
+                'author_email' => 'lucy@example.com',
                 'ingredients' => [
                     'Beef strips',
                     'Bell peppers',
@@ -167,7 +167,7 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'Chocolate Chip Cookies',
                 'description' => 'Classic homemade chocolate chip cookies',
-                'author_email' => 'linda@example.com',
+                'author_email' => 'roger@example.com',
                 'ingredients' => [
                     'Flour',
                     'Butter',
@@ -186,7 +186,7 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'Mediterranean Quinoa Bowl',
                 'description' => 'Healthy Mediterranean-style quinoa bowl',
-                'author_email' => 'linda@example.com',
+                'author_email' => 'amy@example.com',
                 'ingredients' => [
                     'Quinoa',
                     'Chickpeas',
@@ -205,7 +205,7 @@ class RecipeSeeder extends Seeder
             [
                 'name' => 'Banana Bread',
                 'description' => 'Moist and delicious homemade banana bread',
-                'author_email' => 'linda@example.com',
+                'author_email' => 'amy@example.com',
                 'ingredients' => [
                     'Ripe bananas',
                     'Flour',

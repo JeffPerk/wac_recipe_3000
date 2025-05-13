@@ -32,7 +32,6 @@ export const useSearch = () => {
             console.error('Search error:', error.value);
         }
         
-        console.log('Search response:', data.value);
         results.value = data.value?.data || [];
         totalPages.value = data.value?.meta?.last_page || 0;
         loading.value = false;
@@ -40,7 +39,6 @@ export const useSearch = () => {
 
     const index = async () => {
         loading.value = true;
-        console.log('API Base URL:', config.public.apiBase);
         const { data, error } = await useFetch('/recipes', {
             query: { page: route.query.page || 1 },
             baseURL: config.public.apiBase,
@@ -55,7 +53,6 @@ export const useSearch = () => {
             console.error('Index error:', error.value);
         }
         
-        console.log('Index response:', data.value);
         results.value = data.value?.data || [];
         totalPages.value = data.value?.meta?.last_page || 0;
         loading.value = false;
