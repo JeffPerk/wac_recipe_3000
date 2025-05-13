@@ -47,6 +47,7 @@ docker run --rm \
 ```
 
 3. **Run the application**
+
 `cp .env.example .env`
 
 `./vendor/bin/sail up -d`
@@ -54,17 +55,21 @@ docker run --rm \
 `./vendor/bin/sail artisan key:generate`
 
 4. **Build the Database**
+
 `./vendor/bin/sail artisan migrate`
 
 `./vendor/bin/sail artisan db:seed`
 
 5. **Kickstart the nuxt frontend**
+
 `./vendor/bin/sail npm install --prefix frontend`
 
 6. **Run the frontend**
+
 `./vendor/bin/sail npm run dev --prefix frontend`
 
 7. **Confirm your application**
+
 visit the frontend http://localhost:3000
 
 visit the backend http://localhost:8888
